@@ -1,0 +1,236 @@
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: min(65rem, 100%);
+    padding-inline: auto;
+    margin: 0 auto;
+}
+
+/* --- BUTTONS --- */
+.btn {
+    /* common styles */
+    display: inline-block;
+    padding: 0.55em 1.5em .5em;
+    background-color: var(--color-primary);
+    border: 0.125rem solid var(--color-primary);
+    color: var(--color-white);
+    border-radius: 0.25em;
+  
+    /* link necessary styles */
+    text-decoration: none;
+    
+    /* button necessary styles */
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.btn:where(:hover, :focus-visible) {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    color: var(--color-white);
+}
+
+img {
+    display: block;
+}
+
+/* --- HEADER --- */
+.header {
+    background-color: #000;
+    color: #fff;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1.25rem 2rem;
+
+    @media only screen and (min-width: 65rem) {
+        padding: 1.25rem 0;
+    }
+}
+
+.header__title {
+    font-size: 2rem;;
+}
+
+.header .btn {
+    background-color: #555;
+    color: #fff;
+}
+
+#btnSaved:where(:hover, :focus-visible) {
+    background-color: #787878;
+}
+
+.header .btn.active {
+    background-color: #824034;
+    color: #fff;
+}
+
+.header .btn.active:where(:hover, :focus-visible) {
+    background-color: #a0685c;
+}
+
+/* --- SEARCH --- */
+.searchForm {
+    margin: 1rem 2rem;
+}
+
+fieldset {
+    display: contents;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+
+    margin-top: 1.5rem;
+}
+
+.form-grid__unit {
+    display: grid;
+    gap: 0.25rem;
+}
+
+.searchForm label {
+    font-weight: bold;
+}
+
+.searchForm input[type="text"] {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25em;
+}
+
+#btnRunSearch {
+    background-color: #007bff;
+    color: #fff;
+    padding: 0.6rem 1.2rem;
+    border-radius: 0.0125rem;
+}
+
+#btnRunSearch:where(:hover, :focus-visible) {
+    background-color: #0056b3;
+}
+
+/* --- RESULTS --- */
+.results {
+    margin-top: 1.5rem;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+
+    @media only screen and (min-width: 45rem) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media only screen and (min-width: 65rem) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+/* --- DIALOG --- */
+#dialog .container {
+    width: 25rem;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+
+    position: relative;
+    
+    @media only screen and (min-width: 45rem) {
+        width: 35rem;
+        grid-template-columns: repeat(2, 1fr);
+
+        .image-container {
+            grid-column: span 2;
+        }
+    }
+
+    @media only screen and (min-width: 65rem) {
+        width: 45rem;
+    }
+} 
+
+#cancel-btn {
+    border: 0.125rem solid #2B3B65;
+    background-color: #2B3B65;
+    color: #fff;
+}
+
+#cancel-btn:where(:hover, :focus-visible) {
+    border-color: #576585;
+    background-color: #576585;
+    color: #fff;
+}
+
+#save-btn {
+    border: 0.125rem solid #3B652B;
+    color: #3B652B;
+}
+
+#save-btn:where(:hover, :focus-visible) {
+    border: 0.125rem solid #658557;
+    background-color: #658557;
+    color: #fff;
+}
+
+#save-btn:disabled {
+    background-color: #787878;
+    border-color: #787878;
+    color: #fff;
+
+    cursor: default;
+}
+
+#remove-btn {
+    border: 0.125rem solid #824034;
+    color: #824034;
+}
+
+#remove-btn:where(:hover, :focus-visible) {
+    border: 0.125rem solid #a0685c;
+    background-color: #a0685c;
+    color: #fff;
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-container #image {
+    position: relative;
+}
+
+.highlighter {
+    background: #ff000040;
+    border: 1px dashed #fff;
+    z-index: 1;
+    position: absolute;
+}
+
+.info {
+    position: absolute;
+    color: #fff;
+    z-index: 2;
+    font-size: 1.125rem;
+}

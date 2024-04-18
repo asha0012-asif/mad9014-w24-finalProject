@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SPA Final Project</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="./css/css-reset.css">
+        <link rel="stylesheet" href="./css/main.css">
+
+        <!-- <script src="https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision/vision_bundle.js" crossorigin="anonymous"></script> -->
+    </head>
+
+    <body>
+        <header class="header">
+            <div class="container">
+                <a href="./index.html">
+                    <h1 class="header__title">Picture This</h1>
+                </a>
+                <nav class="header__nav">
+                    <button class="btn active" id="btnSearch">Search</button>
+                    <button class="btn" id="btnSaved">Saved</button>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section class="searchForm">
+                <div class="container">
+                    <form method="dialog" class="searchForm__form">
+                        <fieldset>
+                            <legend class="searchForm__text">
+                                Run a search for images
+                            </legend>
+
+                            <div class="form-grid">
+                                <div class="form-grid__unit">
+                                    <label for="keyword">Key Term</label>
+                                    <input type="text" id="keyword" name="keyword" />
+                                </div>
+
+                                <div class="form-grid__unit">
+                                    <button id="btnRunSearch" class="btn">Run Search</button>
+                                </div>
+                            </div>
+
+                        </fieldset>
+                    </form>
+                </div>
+            </section>
+                
+            <section>
+                <div class="container">
+                    <div class="results" id="results">
+                    
+                    </div>
+                    
+                </div>
+            </section>
+            
+            <dialog id="dialog"></dialog>
+        </main>
+        
+        <script src="./js/main.js" type="module"></script>
+    </body>
+</html>
